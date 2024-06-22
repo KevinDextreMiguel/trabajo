@@ -1,0 +1,26 @@
+<div class="title-container">
+  <h1>Detalle de Cuenta Bancaria</h1>
+</div>
+<div class="container">
+
+  <div>
+      <mat-card class="example-card" appearance="outlined">
+          <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>{{ accountbanking.numberAccountBanking }}</mat-card-title>
+              <mat-card-subtitle>{{accountbanking.typeAccountBanking}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="https://img.freepik.com/fotos-premium/plantilla-tarjeta-credito-oro-aislada-ilustracion-fondo-blanco-d_118047-4728.jpg?w=2000">
+          <mat-card-content>{{ accountbanking.amountAccountBanking }}</mat-card-content>
+          <mat-card-content>{{ accountbanking.dateOpening }}</mat-card-content>
+          <mat-card-content>{{ accountbanking.entityBank.nameBankingEntity }}</mat-card-content>
+          <mat-card-actions>
+
+          </mat-card-actions>
+      </mat-card>
+
+  </div>
+
+</div>
+
+

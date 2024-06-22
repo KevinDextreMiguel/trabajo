@@ -1,0 +1,108 @@
+<!-- Icon Link -->
+<link
+  href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+  rel="stylesheet"
+/>
+
+<body>
+  <div class="container" *ngIf="verificar()">
+    <input type="checkbox" id="click" />
+
+    <div class="sidenav">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <img src="assets/images/logo.png" alt="logo">
+            <span class="ml-3 text-xl">PAPAY</span>
+        </a>
+
+      <div class="icon_items">
+        <ul>
+            <li *ngIf="isAdmin()">
+            <i class="bx bxs-dashboard"></i>
+            <button mat-raised-button routerLink="/reportes">Reportes</button>
+          </li>
+
+          <li *ngIf="isAdmin()">
+            <i class="bx bxs-user"></i>
+            <button mat-button [matMenuTriggerFor]="menuR" > Rol </button>
+            <mat-menu #menuR="matMenu">
+              <button mat-menu-item routerLink="/listarrole"> Listar  </button>
+              <button mat-menu-item routerLink="/crearrole">Registrar </button>
+            </mat-menu>
+          </li>
+
+          <li>
+            <i class="bx bxs-user-circle"></i>
+            <button mat-button [matMenuTriggerFor]="menuU"> Usuario</button>
+            <mat-menu #menuU="matMenu">
+              <button mat-menu-item routerLink="/listaruser"> Listar  </button>
+              <button mat-menu-item routerLink="/registraruser" *ngIf="isPensionista()"> Registrar </button>
+            </mat-menu>
+          </li>
+
+          <li>
+            <i class="bx bxs-buildings"></i>
+            <button mat-button [matMenuTriggerFor]="menuE">
+              Entidad Financiera
+            </button>
+            <mat-menu #menuE="matMenu">
+              <button mat-menu-item routerLink="/listarbankingentity">Listar</button>
+              <button mat-menu-item routerLink="/crearbankingentity" *ngIf="isAdmin()">Registrar</button>
+            </mat-menu>
+          </li>
+          <li>
+            <i class="bx bxs-credit-card"></i>
+            <button mat-button [matMenuTriggerFor]="menuC"> Cuenta Bancaria</button>
+            <mat-menu #menuC="matMenu">
+              <button mat-menu-item routerLink="/listaraccountbanking"> Listar  </button>
+              <button mat-menu-item routerLink="/crearaccountbanking" *ngIf="isPensionista()"> Registrar </button>
+            </mat-menu>
+          </li>
+          <li>
+            <i class="bx bxs-dollar-circle"></i>
+            <button mat-button [matMenuTriggerFor]="menuM">Movimientos</button>
+            <mat-menu #menuM="matMenu">
+              <button mat-menu-item routerLink="/listarmovement">Listar</button>
+              <button mat-menu-item routerLink="/crearmovement" *ngIf="isPensionista()">Registrar</button>
+            </mat-menu>
+          </li>
+          <li>
+            <i class="bx bxs-bell"></i>
+            <button mat-button [matMenuTriggerFor]="menuN">Notificacion</button>
+            <mat-menu #menuN="matMenu">
+              <button mat-menu-item routerLink="/listarnotification">Listar</button>
+              <button mat-menu-item routerLink="/crearnotificacion" *ngIf="isAdmin()">  Registrar</button>
+            </mat-menu>
+          </li>
+          <li>
+            <i class="bx bxs-group"></i>
+            <button mat-button [matMenuTriggerFor]="menuS">Servicio</button>
+            <mat-menu #menuS="matMenu">
+              <button mat-menu-item routerLink="/listarservicio">Listar</button>
+              <button mat-menu-item routerLink="/crearservicio"> Registrar</button>
+            </mat-menu>
+          </li>
+          <li>
+            <i class="bx bxs-briefcase-alt-2"></i>
+            <button mat-button [matMenuTriggerFor]="menuTS">Tipo de Servicio</button>
+            <mat-menu #menuTS="matMenu" >
+              <button mat-menu-item routerLink="/listartypeservice">Listar</button>
+              <button mat-menu-item routerLink="/creartypeservice" *ngIf="isAdmin()">Registrar</button>
+            </mat-menu>
+          </li>
+          <li>
+            <i class="bx bxs-receipt"></i>
+            <button mat-button [matMenuTriggerFor]="menuV">Voucher</button>
+            <mat-menu #menuV="matMenu">
+              <button mat-menu-item routerLink="/listarvoucher">Listar</button>
+              <button mat-menu-item routerLink="/crearvoucher" *ngIf="isPensionista()">Registrar</button>
+            </mat-menu>
+          </li>
+          <li>
+            <i class="bx bx-log-in"></i>
+            <button mat-raised-button routerLink="/login">Salir</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>

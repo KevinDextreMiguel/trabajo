@@ -1,0 +1,50 @@
+.title-container {
+
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 60px;
+    margin-left: 260px;
+}
+
+
+.container{
+  text-align: center;
+  padding-left: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+
+h1 {
+  font-weight: bold;
+  color: #202C94;
+  padding-left: 1%;
+}
+*
+.example-card {
+  text-align: center;
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://www.archivoexcel.com/wp-content/uploads/2013/09/BANCO-IMAGEN.png');
+  background-size: cover;
+
+}
+
+
+.example-header-image1 {
+  background-image: url('https://bancaporinternet.interbank.pe/static/images/interbank.png');
+  background-size: cover;
+
+}
+
+
+
+.banking-item {
+  text-align: center;
+  flex: 5;
+  max-width: calc(1000% - 100px);
+}

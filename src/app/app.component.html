@@ -1,0 +1,8 @@
+<body style="background-color: #E0E2EF;">
+
+<div *ngIf="router.url !== '/login' && router.url !== '/home'&& router.url !== '/sobrenosotros'&& router.url !== '/contacto'">
+    <app-navegar></app-navegar>
+</div>
+<router-outlet></router-outlet>
+</body>
+

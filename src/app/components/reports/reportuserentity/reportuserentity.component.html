@@ -1,0 +1,26 @@
+<div class="title-container">
+
+  <div  class="title">
+
+      <h1>Cantidad usuarios por Entidad Bancaria</h1>
+
+  </div>
+
+  <div  class="chart-container">
+
+      <!-- Gráfico de barras -->
+
+      <canvas baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+       [options]="barChartOptions"
+      [legend]="barChartLegend"
+           [type]="barChartType">
+
+
+
+      </canvas>
+
+  </div>
+
+</div>

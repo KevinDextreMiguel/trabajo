@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="title-container">
+    <h1>Lista de Entidades bancarias</h1>
+  </div>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+    <ng-container matColumnDef="nameBankingEntity">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.nameBankingEntity}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cellphoneBankingEntity">
+      <th mat-header-cell *matHeaderCellDef> Telefono </th>
+      <td mat-cell *matCellDef="let element"> {{element.cellphoneBankingEntity}} </td>
+    </ng-container>
+
+   
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef> Editar </th>
+      <td mat-cell *matCellDef="let element">
+        <button class="btn" routerLink="/editarbankingentity/{{element.idBankingEntity}}">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+      <td mat-cell *matCellDef="let element">
+        <button class="btn" (click)="deleteBanking(element.idBankingEntity)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="detalle">
+      <th mat-header-cell *matHeaderCellDef> Ver detalle </th>
+      <td mat-cell *matCellDef="let element">
+        <button class="btn" routerLink="/verdetallebanking/{{element.idBankingEntity}}">
+          <mat-icon>visibility</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

@@ -1,0 +1,48 @@
+.title-container {
+
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 60px;
+  margin-left: 260px;
+}
+
+
+.container{
+text-align: center;
+padding-left: 15%;
+display: flex;
+flex-wrap: wrap;
+gap: 16px;
+justify-content: center;
+}
+
+
+h1 {
+font-weight: bold;
+color: #202C94;
+padding-left: 1%;
+}
+*
+.example-card {
+text-align: center;
+max-width: 500px;
+}
+
+.example-header-image {
+background-image: url('https://img.freepik.com/fotos-premium/plantilla-tarjeta-credito-oro-aislada-ilustracion-fondo-blanco-d_118047-4728.jpg?w=2000');
+background-size: cover;
+}
+
+
+.example-header-image1 {
+background-image: url('https://bancaporinternet.interbank.pe/static/images/interbank.png');
+background-size: cover;
+}
+
+
+
+.banking-item {
+text-align: center;
+flex: 5;
+max-width: calc(1000% - 100px);
+}
